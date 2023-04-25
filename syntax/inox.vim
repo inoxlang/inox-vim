@@ -23,6 +23,7 @@ syn match   inoxNamedPattern        /[%][a-zA-Z_][0-9a-zA-Z_]*/
 syn match   inoxDollarVariable      /[$]\{1,2}[a-zA-Z_][0-9a-zA-Z_]*/ 
 syn match   inoxIdentifier /[a-zA-Z_][a-zA-Z0-9_-]*\>/
 syn match   inoxUnambiguousIdentifier /#[a-zA-Z_][a-zA-Z0-9_-]*\>/
+syn match   inoxCallee /[a-zA-Z_][a-zA-Z0-9_-]*!\=\([(]\)\@=/
 
 syn match   inoxFlags /--\=[a-zA-Z_-]\+\>/
 
@@ -39,6 +40,8 @@ hi def link inoxNamedPattern      Type
 
 hi def link inoxDollarVariable        Identifier
 hi def link inoxUnambiguousIdentifier String
+hi def link inoxCallee                Function
+
 
 hi def link inoxFlags              String
 
